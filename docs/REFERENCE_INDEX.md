@@ -1,0 +1,123 @@
+# Reference Index for Cyberpunk 2077 Redscript Modding
+
+Master index of all reference materials. Use this to quickly find where to look.
+
+---
+
+## Quick Links by Topic
+
+### Need to find a Stat type?
+→ `~/Developer/RedBurrito/docs/STATS_REFERENCE.md` (project-specific)
+→ `~/Developer/cyberpunk/cyberpunk/` (full API)
+
+### Need input/action names?
+→ `~/Developer/RedBurrito/docs/INPUT_AND_CNAMES.md`
+
+### Need to understand a game class?
+→ `~/Developer/cyberpunk/cyberpunk/` - organized by category:
+  - `player/` - PlayerPuppet, player systems
+  - `damage/` - Damage system
+  - `items/` - Item handling
+  - `ai/` - AI behavior
+  - `UI/` - User interface
+  - `devices/` - World devices (vending machines, etc.)
+
+### Need Redscript syntax help?
+→ `~/Developer/Redscript-Wiki/`
+  - `language/` - Syntax, types, annotations
+  - `getting-started/` - Setup guides
+  - `references-and-examples/` - Code examples
+
+### Need modding guides?
+→ `~/Developer/Cyberpunk-Modding-Docs/` (when downloaded)
+  - `for-mod-creators-theory/` - Concepts
+  - `modding-guides/` - How-to guides
+
+### Need item IDs?
+→ External: https://www.nexusmods.com/cyberpunk2077/mods/521
+→ Search in `~/Developer/cyberpunk/` for specific items
+
+### Need working mod examples?
+→ `~/Library/Application Support/Steam/steamapps/common/Cyberpunk 2077/r6/scripts/Other/`
+→ `~/Developer/RedBurrito/scripts/` - Your own code
+
+---
+
+## Directory Structure
+
+```
+~/Developer/
+├── RedBurrito/                    # YOUR PROJECT
+│   ├── scripts/                   # Mod source code
+│   ├── docs/                      # Cheatsheets
+│   │   ├── STATS_REFERENCE.md     # All stat types
+│   │   ├── INPUT_AND_CNAMES.md    # Input actions, CNames
+│   │   └── REFERENCE_INDEX.md     # This file
+│   └── CLAUDE.md                  # Project rules
+│
+├── cyberpunk/                     # GAME API (adamsmasher)
+│   ├── cyberpunk/                 # Game classes
+│   │   ├── player/
+│   │   ├── damage/
+│   │   ├── items/
+│   │   └── ...
+│   ├── core/                      # Core types
+│   └── samples/                   # Examples
+│
+├── Redscript-Wiki/                # REDSCRIPT DOCS
+│   ├── language/                  # Syntax reference
+│   ├── getting-started/           # Tutorials
+│   └── references-and-examples/   # Examples
+│
+└── Cyberpunk-Modding-Docs/        # MODDING GUIDES
+    ├── for-mod-creators-theory/
+    └── modding-guides/
+```
+
+---
+
+## Search Commands
+
+### Find a class definition
+```bash
+grep -r "class ClassName" ~/Developer/cyberpunk/
+```
+
+### Find a function
+```bash
+grep -r "func FunctionName" ~/Developer/cyberpunk/
+```
+
+### Find stat type usage
+```bash
+grep -r "gamedataStatType.StatName" ~/Developer/cyberpunk/
+```
+
+### Find all files mentioning something
+```bash
+grep -rl "SearchTerm" ~/Developer/cyberpunk/ | head -20
+```
+
+---
+
+## Common Patterns Location
+
+| Pattern | Example Location |
+|---------|-----------------|
+| @wrapMethod | `RedBurrito/scripts/RedBurrito.reds` |
+| @addMethod | `RedBurrito/scripts/RedBurrito.reds` |
+| @replaceMethod | `RedBurrito/scripts/RedBurritoCheats/RedBurritoMovement.reds` |
+| @addField | `RedBurrito/scripts/InsaneCamo.reds` |
+| Input listener | `RedBurrito/scripts/InsaneCamo.reds` |
+| Stat modifiers | `RedBurrito/scripts/RedBurritoCheats/` |
+| Quest facts | `RedBurrito/scripts/RedBurritoCheats/RedBurritoMovement.reds` |
+| Item injection | `RedBurrito/scripts/RedBurrito.reds` |
+
+---
+
+## Updating This Index
+
+When adding new reference materials:
+1. Clone/download to `~/Developer/`
+2. Add entry to this index
+3. Update CLAUDE.md if needed
