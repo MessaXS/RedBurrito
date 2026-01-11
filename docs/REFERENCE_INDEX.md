@@ -29,9 +29,16 @@ Master index of all reference materials. Use this to quickly find where to look.
   - `references-and-examples/` - Code examples
 
 ### Need modding guides?
-→ `~/Developer/Cyberpunk-Modding-Docs/` (when downloaded)
-  - `for-mod-creators-theory/` - Concepts
-  - `modding-guides/` - How-to guides
+→ `~/Developer/Cyberpunk-Modding-Docs/` (4.6GB, 554 md files!)
+  - `for-mod-creators-theory/` - Concepts and theory
+  - `modding-guides/` - Practical how-to guides
+  - `for-mod-creators-theory/references-lists-and-overviews/` - CHEAT SHEETS!
+
+### Need ALL BaseStats types? (1494 types!)
+→ `~/Developer/Cyberpunk-Modding-Docs/for-mod-creators-theory/references-lists-and-overviews/cheat-sheet-tweak-ids/cheat-sheet-base-stats.md`
+
+### Need scripting best practices?
+→ `~/Developer/Cyberpunk-Modding-Docs/for-mod-creators-theory/references-lists-and-overviews/scripting/scripting-best-practices-pitfalls.md`
 
 ### Need item IDs?
 → External: https://www.nexusmods.com/cyberpunk2077/mods/521
@@ -69,8 +76,13 @@ Master index of all reference materials. Use this to quickly find where to look.
 │   ├── getting-started/           # Tutorials
 │   └── references-and-examples/   # Examples
 │
-└── Cyberpunk-Modding-Docs/        # MODDING GUIDES
+└── Cyberpunk-Modding-Docs/        # MODDING GUIDES (4.6GB!)
     ├── for-mod-creators-theory/
+    │   └── references-lists-and-overviews/
+    │       ├── cheat-sheet-tweak-ids/
+    │       │   ├── cheat-sheet-base-stats.md  # 1494 BaseStats!
+    │       │   └── weapons/
+    │       └── scripting/
     └── modding-guides/
 ```
 
