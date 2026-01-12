@@ -139,31 +139,51 @@ player.SetWarningMessage("Message\nSecond Line");
 
 ## Token Economy Strategy
 
-### Search Priority (ALWAYS follow this order!)
-1. **Check project cheatsheets first** (`docs/`) - instant, no tokens
-2. **Search with Grep** - targeted search, low tokens
-3. **Use Explore subagent** - for complex searches across multiple dirs
-4. **Read specific files** - only after locating them
+### CRITICAL: Read Order for New Sessions
+1. **ALWAYS read `docs/CODE_MAP.md` first** - full codebase overview (~200 lines)
+2. **Check `docs/` cheatsheets** for specific info (stats, syntax, systems)
+3. **Read specific .reds file** only when modifying it
+4. **NEVER read RedBurritoItems/*.reds** - they're just TweakDBID lists
+
+### File Read Priority
+| Priority | Files | When to Read |
+|----------|-------|--------------|
+| ALWAYS | `docs/CODE_MAP.md` | Start of every session |
+| AS NEEDED | `docs/STATS_REFERENCE.md` | When adding stat modifiers |
+| AS NEEDED | `docs/REDSCRIPT_SYNTAX.md` | When unsure about syntax |
+| AS NEEDED | `docs/GAME_SYSTEMS.md` | When using GameInstance |
+| ONLY IF EDITING | `scripts/*.reds` | When modifying that file |
+| NEVER | `scripts/RedBurritoItems/*.reds` | Just TweakDBID lists |
 
 ### DO NOT
-- Read entire API files when searching for one thing
-- Re-read the same reference files repeatedly
-- Search without checking cheatsheets first
+- Read RedBurritoItems files (1000+ lines of just item IDs)
+- Re-read files already in context
+- Read entire API directories
+- Search without checking docs/ first
 
-### Subagent Strategy
-When searching for something in the reference materials:
-- Use `Task` tool with `subagent_type=Explore` for broad searches
-- Always specify: "search in ~/Developer/cyberpunk/ for [topic]"
-- Request only file paths first, then read specific files
-
-### Example Search Workflow
+### Subagent Strategy (for API searches)
 ```
-User: "How do I modify vehicle speed?"
+Task: "Find how to modify [X]"
+→ Use Explore subagent with model=haiku
+→ Search in ~/Developer/cyberpunk/
+→ Return only file paths, not content
+```
 
-1. Check docs/STATS_REFERENCE.md → Not there
-2. Grep: grep -r "vehicle.*speed" ~/Developer/cyberpunk/
-3. If many results → use Explore subagent
-4. Read only the relevant file(s) found
+### Example: Adding New Feature (Minimal Tokens)
+```
+1. Read docs/CODE_MAP.md → understand architecture
+2. Check "When to Read Specific Files" section
+3. Read ONE template file (e.g., InsaneCamo.reds for controller)
+4. Write new code using documented patterns
+5. DON'T read files you're not modifying
+```
+
+### Example: Adding New Items
+```
+1. DON'T read existing Items files
+2. Copy pattern from CODE_MAP.md (Pattern 4)
+3. Add TweakDBIDs to appropriate file
+4. Items can be found at: https://www.nexusmods.com/cyberpunk2077/mods/521
 ```
 
 ---

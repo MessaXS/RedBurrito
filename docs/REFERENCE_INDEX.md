@@ -6,12 +6,27 @@ Master index of all reference materials. Use this to quickly find where to look.
 
 ## Quick Links by Topic
 
+### Starting a new session? READ FIRST!
+→ `~/Developer/RedBurrito/docs/CODE_MAP.md` - **ALWAYS read this first!**
+
+### New to the project? Read the workflow guide!
+→ `~/Developer/RedBurrito/docs/WORKFLOW.md` - Step-by-step guide for humans
+
+### Want to know ALL Redscript capabilities?
+→ `~/Developer/RedBurrito/docs/REDSCRIPT_CAPABILITIES.md` - Everything possible
+
 ### Need to find a Stat type?
 → `~/Developer/RedBurrito/docs/STATS_REFERENCE.md` (project-specific)
 → `~/Developer/cyberpunk/cyberpunk/` (full API)
 
 ### Need input/action names?
 → `~/Developer/RedBurrito/docs/INPUT_AND_CNAMES.md`
+
+### Need Redscript syntax (@wrapMethod, types, etc.)?
+→ `~/Developer/RedBurrito/docs/REDSCRIPT_SYNTAX.md`
+
+### Need GameInstance systems?
+→ `~/Developer/RedBurrito/docs/GAME_SYSTEMS.md`
 
 ### Need to understand a game class?
 → `~/Developer/cyberpunk/cyberpunk/` - organized by category:
@@ -57,8 +72,13 @@ Master index of all reference materials. Use this to quickly find where to look.
 ├── RedBurrito/                    # YOUR PROJECT
 │   ├── scripts/                   # Mod source code
 │   ├── docs/                      # Cheatsheets
+│   │   ├── CODE_MAP.md            # **READ FIRST** - full codebase map
+│   │   ├── WORKFLOW.md            # Guide for humans (how to use everything)
+│   │   ├── REDSCRIPT_CAPABILITIES.md  # ALL Redscript capabilities
 │   │   ├── STATS_REFERENCE.md     # All stat types
 │   │   ├── INPUT_AND_CNAMES.md    # Input actions, CNames
+│   │   ├── REDSCRIPT_SYNTAX.md    # Annotations, types, syntax
+│   │   ├── GAME_SYSTEMS.md        # GameInstance systems
 │   │   └── REFERENCE_INDEX.md     # This file
 │   └── CLAUDE.md                  # Project rules
 │

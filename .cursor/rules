@@ -1,0 +1,51 @@
+# RedBurrito - Cursor Rules
+
+## Language
+- Communication with user: Russian
+- All code, comments, variable names: English only
+
+## Technology Stack
+**CRITICAL: Use ONLY Redscript**
+- NO CET, TweakXL, Codeware, RED4ext, ArchiveXL
+
+## Token Optimization - READ ORDER
+
+### 1. ALWAYS read first (every session):
+→ `docs/CODE_MAP.md` - complete codebase map with all patterns
+
+### 2. Read AS NEEDED:
+- `docs/STATS_REFERENCE.md` - when adding stat modifiers
+- `docs/REDSCRIPT_SYNTAX.md` - when unsure about syntax
+- `docs/GAME_SYSTEMS.md` - when using GameInstance
+
+### 3. Read ONLY when editing:
+- `scripts/*.reds` - only the specific file you're modifying
+
+### 4. NEVER read:
+- `scripts/RedBurritoItems/*.reds` - just TweakDBID lists (1000+ lines each)
+
+## Architecture Patterns (from CODE_MAP.md)
+
+### Vending Machine Trigger (most common)
+```swift
+@wrapMethod(VendingMachine)
+protected func DispenseItems(request: ref<DispenseRequest>) -> Void {
+    wrappedMethod(request);
+    this.GiveMeRedBurritoXXX();
+}
+```
+
+### Hold-to-Activate Controller
+→ See InsaneCamo.reds for full pattern
+
+### Toggle with Flag
+→ See InsaneSandevistan.reds for full pattern
+
+## Code Style
+- File Header: `// Module Name Ver.X.X – DD Mon YYYY @MessaXS`
+- Naming: PascalCase for modules/classes/functions, camelCase for variables
+
+## External References
+- Game API: `~/Developer/cyberpunk/`
+- Redscript Wiki: `~/Developer/Redscript-Wiki/`
+- Item IDs: https://www.nexusmods.com/cyberpunk2077/mods/521
