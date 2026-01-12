@@ -79,6 +79,7 @@ Master index of all reference materials. Use this to quickly find where to look.
 │   │   ├── INPUT_AND_CNAMES.md    # Input actions, CNames
 │   │   ├── REDSCRIPT_SYNTAX.md    # Annotations, types, syntax
 │   │   ├── GAME_SYSTEMS.md        # GameInstance systems
+│   │   ├── TROUBLESHOOTING.md     # Errors, antipatterns, debugging
 │   │   └── REFERENCE_INDEX.md     # This file
 │   └── CLAUDE.md                  # Project rules
 │

@@ -1,4 +1,4 @@
-// RedBurrito Cheats Ver.1.5 – 29 Dec 2025 @MessaXS
+// RedBurritoMovement Ver.2.0 – 12 Jan 2026 @MessaXS
 //
 // CREDITS & SPECIAL THANKS:
 // - Infinite Double Jump & Infinite Air Dash code based on mods by yakuzadeso:
@@ -11,6 +11,8 @@
 //   Original code may have been modified for integration with RedBurrito system
 //
 // If you find these features useful, please support the original mod authors!
+
+module RedBurrito.Cheats.Movement
 
 @wrapMethod(VendingMachine)
 protected func DispenseItems(request: ref<DispenseRequest>) -> Void {

@@ -1,6 +1,6 @@
-// RedBurrito Items Ver.1.5 – 29 Dec 2025 @MessaXS
+// RedBurritoWeapons Ver.2.0 – 12 Jan 2026 @MessaXS
 
-module EnhancedMachines.VendingMachine.RedBurrito
+module RedBurrito.Items.Weapons
 
 @wrapMethod(VendingMachine)
 protected func DispenseItems(request: ref<DispenseRequest>) -> Void {

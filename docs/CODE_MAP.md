@@ -1,5 +1,7 @@
 # RedBurrito Code Map
 
+**Version:** 2.0 | **Updated:** 12 Jan 2026
+
 **Purpose:** Quick reference for AI to understand codebase without reading all files.
 **Total:** 17 .reds files, ~6200 lines of code.
 

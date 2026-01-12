@@ -1,6 +1,6 @@
-// RedBurrito Cheats Ver.1.5 – 29 Dec 2025 @MessaXS
+// RedBurritoProgress Ver.2.0 – 12 Jan 2026 @MessaXS
 // Inject custom items and level up through vending machines
-module EnhancedMachines.VendingMachine.RedBurrito
+module RedBurrito.Cheats.Progress
 
 @wrapMethod(VendingMachine)
 protected func DispenseItems(request: ref<DispenseRequest>) -> Void {

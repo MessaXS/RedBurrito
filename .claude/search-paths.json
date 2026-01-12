@@ -1,0 +1,74 @@
+{
+  "$schema": "RedBurrito search paths configuration",
+  "version": "2.0",
+  "description": "Reference paths for AI agents to search efficiently",
+
+  "references": {
+    "game_api": {
+      "path": "~/Developer/cyberpunk/",
+      "description": "Game API (adamsmasher/cyberpunk)",
+      "priority": "high",
+      "use_for": ["class definitions", "method signatures", "game systems"]
+    },
+    "redscript_wiki": {
+      "path": "~/Developer/Redscript-Wiki/",
+      "description": "Redscript language documentation",
+      "priority": "medium",
+      "use_for": ["syntax", "annotations", "language features"]
+    },
+    "modding_docs": {
+      "path": "~/Developer/Cyberpunk-Modding-Docs/",
+      "description": "General modding guides (4.6GB, 554 files)",
+      "priority": "low",
+      "use_for": ["concepts", "tutorials", "cheat sheets"],
+      "note": "Large! Use specific paths when possible"
+    },
+    "other_mods": {
+      "path": "~/Library/Application Support/Steam/steamapps/common/Cyberpunk 2077/r6/scripts/Other/",
+      "description": "Reference mods (working examples)",
+      "priority": "medium",
+      "use_for": ["patterns", "working code examples"]
+    }
+  },
+
+  "project_docs": {
+    "code_map": "docs/CODE_MAP.md",
+    "stats": "docs/STATS_REFERENCE.md",
+    "syntax": "docs/REDSCRIPT_SYNTAX.md",
+    "systems": "docs/GAME_SYSTEMS.md",
+    "input": "docs/INPUT_AND_CNAMES.md",
+    "troubleshooting": "docs/TROUBLESHOOTING.md"
+  },
+
+  "external_urls": {
+    "item_ids": "https://www.nexusmods.com/cyberpunk2077/mods/521",
+    "nativedb": "https://nativedb.red4ext.com/",
+    "redscript_docs": "https://github.com/jac3km4/redscript"
+  },
+
+  "search_strategies": {
+    "find_class": {
+      "agent": "Explore",
+      "model": "haiku",
+      "path": "game_api",
+      "prompt_template": "Find class definition for {class_name} in ~/Developer/cyberpunk/"
+    },
+    "find_method": {
+      "agent": "Explore",
+      "model": "haiku",
+      "path": "game_api",
+      "prompt_template": "Find method {method_name} signature in ~/Developer/cyberpunk/"
+    },
+    "find_stat": {
+      "agent": "Explore",
+      "model": "haiku",
+      "path": "project_docs",
+      "prompt_template": "Look up gamedataStatType.{stat_name} in docs/STATS_REFERENCE.md"
+    },
+    "code_review": {
+      "agent": "general-purpose",
+      "model": "sonnet",
+      "prompt_template": "Review {file_path} for compliance with CLAUDE.md standards"
+    }
+  }
+}

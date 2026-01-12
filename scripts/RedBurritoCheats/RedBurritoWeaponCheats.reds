@@ -1,4 +1,8 @@
-// RedBurrito Cheats Ver.1.5 – 29 Dec 2025 @MessaXS
+// RedBurritoWeaponCheats Ver.2.0 – 12 Jan 2026 @MessaXS
+// Weapon stat cheats
+module RedBurrito.Cheats.Weapons
+
+module RedBurrito.Cheats.Weapons
 
 @wrapMethod(VendingMachine)
 protected func DispenseItems(request: ref<DispenseRequest>) -> Void {

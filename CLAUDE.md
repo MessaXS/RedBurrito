@@ -1,5 +1,7 @@
 # RedBurrito - Project Rules for Claude Code
 
+**Version:** 2.0 | **Updated:** 12 Jan 2026
+
 ## Language
 - Communication with user: Russian
 - All code, comments, variable names: English only
@@ -103,8 +105,10 @@ player.SetWarningMessage("Message\nSecond Line");
 
 ### Project Cheatsheets (CHECK FIRST!)
 `~/Developer/RedBurrito/docs/`
+- `CODE_MAP.md` - Full codebase overview (READ FIRST!)
 - `STATS_REFERENCE.md` - All gamedataStatType with descriptions
 - `INPUT_AND_CNAMES.md` - Input actions, CNames, quest facts
+- `TROUBLESHOOTING.md` - Common errors, antipatterns, debugging tips
 - `REFERENCE_INDEX.md` - Master index of all references
 
 ### Game API (adamsmasher/cyberpunk)
@@ -161,12 +165,25 @@ player.SetWarningMessage("Message\nSecond Line");
 - Read entire API directories
 - Search without checking docs/ first
 
-### Subagent Strategy (for API searches)
+### Agent Strategy
+
+**Available agents:** Explore, Plan, Bash, general-purpose
+
+**Configuration:** `.claude/search-paths.json` - paths and search strategies
+
+| Task | Agent | Model | Path |
+|------|-------|-------|------|
+| Find class/method | Explore | haiku | ~/Developer/cyberpunk/ |
+| Find syntax | Explore | haiku | ~/Developer/Redscript-Wiki/ |
+| Code review | general-purpose | sonnet | scripts/*.reds |
+| Plan new feature | Plan | sonnet | - |
+
+**Example: Find class definition**
 ```
-Task: "Find how to modify [X]"
-→ Use Explore subagent with model=haiku
-→ Search in ~/Developer/cyberpunk/
-→ Return only file paths, not content
+Use Task tool with:
+  subagent_type: Explore
+  model: haiku
+  prompt: "Find class VendingMachine in ~/Developer/cyberpunk/"
 ```
 
 ### Example: Adding New Feature (Minimal Tokens)

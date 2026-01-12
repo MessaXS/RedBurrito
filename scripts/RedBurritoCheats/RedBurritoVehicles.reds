@@ -1,6 +1,6 @@
-// RedBurrito Cheats Ver.1.5 – 29 Dec 2025 @MessaXS
-
-module EnhancedMachines.VendingMachine.RedBurrito
+// RedBurritoVehicles Ver.2.0 – 12 Jan 2026 @MessaXS
+// Vehicle unlock cheats
+module RedBurrito.Cheats.Vehicles
 
 @wrapMethod(VendingMachine)
 protected func DispenseItems(request: ref<DispenseRequest>) -> Void {
